@@ -224,7 +224,9 @@ namespace Lab4_Tenisdef
 
         }
 
-        
+        private void ball_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

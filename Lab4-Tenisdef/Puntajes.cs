@@ -17,8 +17,10 @@ namespace Lab4_Tenisdef
         public Puntajes()
         {
             InitializeComponent();
-            ConfigurarDataGridView();
+            ConfigurarDataGridView();            
             CargarPuntajesDesdeArchivo();
+           
+
         }
 
         private void CargarPuntajesDesdeArchivo()
@@ -30,8 +32,9 @@ namespace Lab4_Tenisdef
                 while ((linea = reader.ReadLine()) != null)
                 {
                     string[] datos = linea.Split(',');
-                    dataGridView1.Rows.Add(datos[0], datos[1], datos[2], datos[3]);
+                    dataGridView1.Rows.Add(datos[0], datos[1], datos[2], datos[3], datos[4]);
                 }
+
             }
             fs1.Close();
         }
@@ -49,17 +52,19 @@ namespace Lab4_Tenisdef
             // Agregar al DataGridView
             dataGridView1.Rows.Add(fecha, textBox1.Text, textBox3.Text, textBox2.Text, textBox4.Text);
 
-            // Agregar al archivo
-            using (StreamWriter writer = new StreamWriter("Puntajes.txt", true)) // true para agregar al archivo existente
+            using (StreamWriter writer = new StreamWriter("Puntajes.txt", true))
             {
                 writer.WriteLine($"{fecha},{textBox1.Text},{textBox3.Text},{textBox2.Text},{textBox4.Text}");
             }
+
 
             // Limpiar TextBox
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
+
+            
         }
 
         private void ConfigurarDataGridView()
@@ -148,6 +153,42 @@ namespace Lab4_Tenisdef
             // Escribir el contenido actualizado en el archivo
             File.WriteAllText(archivoPuntajes, contenidoArchivo.ToString());
         }
+
+
+        private void MostrarTopCincoPuntajes()
+        {
+            // Lista para almacenar los datos con suma de puntajes
+            var puntajes = new List<(string fecha, string jugador1, int puntaje1, string jugador2, int puntaje2, int sumaPuntajes)>();
+
+            // Leer los datos del DataGridView
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[1].Value != null && row.Cells[2].Value != null &&
+                    row.Cells[3].Value != null && row.Cells[4].Value != null)
+                {
+                    int puntaje1 = int.Parse(row.Cells[2].Value.ToString());
+                    int puntaje2 = int.Parse(row.Cells[4].Value.ToString());
+                    puntajes.Add((row.Cells[0].Value.ToString(),
+                                  row.Cells[1].Value.ToString(),
+                                  puntaje1,
+                                  row.Cells[3].Value.ToString(),
+                                  puntaje2,
+                                  puntaje1 + puntaje2));
+                }
+            }
+
+            // Ordenar la lista y tomar los primeros 5 elementos
+            var topCinco = puntajes.OrderByDescending(x => x.sumaPuntajes).Take(5);
+
+            // Limpiar el DataGridView y agregar los elementos filtrados
+            dataGridView1.Rows.Clear();
+            foreach (var item in topCinco)
+            {
+                dataGridView1.Rows.Add(item.fecha, item.jugador1, item.puntaje1, item.jugador2, item.puntaje2);
+            }
+        }
+
+
 
     }
 }

@@ -68,6 +68,7 @@
             this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ball.TabIndex = 2;
             this.ball.TabStop = false;
+            this.ball.Click += new System.EventHandler(this.ball_Click);
             // 
             // trmMove
             // 
