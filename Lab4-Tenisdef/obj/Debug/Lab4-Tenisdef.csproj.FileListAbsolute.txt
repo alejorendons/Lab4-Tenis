@@ -1,0 +1,12 @@
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\bin\Debug\Lab4-Tenisdef.exe.config
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\bin\Debug\Lab4-Tenisdef.exe
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\bin\Debug\Lab4-Tenisdef.pdb
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\obj\Debug\Lab4-Tenisdef.csproj.AssemblyReference.cache
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\obj\Debug\Lab4_Tenisdef.Properties.Resources.resources
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\obj\Debug\Lab4-Tenisdef.csproj.GenerateResource.cache
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\obj\Debug\Lab4-Tenisdef.csproj.CoreCompileInputs.cache
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\obj\Debug\Lab4-Tenisdef.exe
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\obj\Debug\Lab4-Tenisdef.pdb
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\obj\Debug\Lab4_Tenisdef.FormJuego.resources
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\obj\Debug\Lab4_Tenisdef.FormMenu.resources
+C:\Users\Diego Rendón\source\repos\Lab4-Tenisdef\Lab4-Tenisdef\obj\Debug\Lab4_Tenisdef.Puntajes.resources
