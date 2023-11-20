@@ -181,11 +181,11 @@ namespace Lab4_Tenisdef
 
         private void MostrarFormularioPuntajes()
         {
-            // Crear una instancia del formulario de puntajes
             Puntajes formularioPuntajes = new Puntajes();
 
-            // Aquí puedes asignar cualquier dato necesario al formulario de puntajes
-            // Por ejemplo, pasar los nombres de los jugadores y los puntajes
+            // Suscribir al evento FormClosed del formulario de puntajes
+            formularioPuntajes.FormClosed += FormularioPuntajes_FormClosed;
+
             formularioPuntajes.ShowDialog(); // Mostrar el formulario como un diálogo
         }
 
@@ -227,6 +227,11 @@ namespace Lab4_Tenisdef
         private void ball_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormularioPuntajes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close(); // Cerrar el formulario de juego cuando se cierra el formulario de puntajes
         }
     }
 }

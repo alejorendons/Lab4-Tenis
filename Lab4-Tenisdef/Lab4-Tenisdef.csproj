@@ -101,5 +101,11 @@
   <ItemGroup>
     <None Include="Resources\34234903-suelo-parcela-campo-sport-court-tennis-con-blanco-net-ilustración-vectorial.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

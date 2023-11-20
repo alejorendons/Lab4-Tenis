@@ -236,6 +236,11 @@ namespace Lab4_Tenisdef
             dataGridView2.Columns.Add("columna4", "Puntaje Jugador 2");
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormMenu menuForm = new FormMenu();
+            // Mostrar el formulario de puntajes
+            menuForm.Show();
+        }
     }
 }

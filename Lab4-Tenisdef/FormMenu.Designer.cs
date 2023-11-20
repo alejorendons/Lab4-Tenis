@@ -35,9 +35,9 @@
             // 
             // btnIniciarJuego
             // 
-            this.btnIniciarJuego.Location = new System.Drawing.Point(146, 113);
+            this.btnIniciarJuego.Location = new System.Drawing.Point(12, 411);
             this.btnIniciarJuego.Name = "btnIniciarJuego";
-            this.btnIniciarJuego.Size = new System.Drawing.Size(186, 83);
+            this.btnIniciarJuego.Size = new System.Drawing.Size(102, 30);
             this.btnIniciarJuego.TabIndex = 0;
             this.btnIniciarJuego.Text = "Iniciar";
             this.btnIniciarJuego.UseVisualStyleBackColor = true;
@@ -45,9 +45,9 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(430, 113);
+            this.btnCerrar.Location = new System.Drawing.Point(686, 411);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(186, 83);
+            this.btnCerrar.Size = new System.Drawing.Size(102, 30);
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -55,9 +55,9 @@
             // 
             // btnPuntajes
             // 
-            this.btnPuntajes.Location = new System.Drawing.Point(284, 258);
+            this.btnPuntajes.Location = new System.Drawing.Point(352, 411);
             this.btnPuntajes.Name = "btnPuntajes";
-            this.btnPuntajes.Size = new System.Drawing.Size(186, 83);
+            this.btnPuntajes.Size = new System.Drawing.Size(102, 30);
             this.btnPuntajes.TabIndex = 2;
             this.btnPuntajes.Text = "Puntajes";
             this.btnPuntajes.UseVisualStyleBackColor = true;
@@ -67,12 +67,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Lab4_Tenisdef.Properties.Resources._1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnPuntajes);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnIniciarJuego);
+            this.DoubleBuffered = true;
             this.Name = "FormMenu";
-            this.Text = "Form1";
+            this.Text = "Tenis";
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             this.ResumeLayout(false);
 
         }

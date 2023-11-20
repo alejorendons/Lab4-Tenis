@@ -40,8 +40,26 @@ namespace Lab4_Tenisdef
         {
             Puntajes puntajesForm = new Puntajes();
 
+            // Suscribirse al evento FormClosed
+            puntajesForm.FormClosed += new FormClosedEventHandler(PuntajesForm_FormClosed);
+
+            // Ocultar este formulario
+            this.Hide();
+
             // Mostrar el formulario de puntajes
             puntajesForm.Show();
+        }
+
+        private void PuntajesForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Cerrar este formulario
+            this.Close();
+        }
+
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
