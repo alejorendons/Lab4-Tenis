@@ -19,7 +19,9 @@ namespace Lab4_Tenisdef
             InitializeComponent();
             ConfigurarDataGridView();            
             CargarPuntajesDesdeArchivo();
-           
+            ConfigurarDataGridView2();
+            ActualizarDataGridView2ConTopCinco();
+
 
         }
 
@@ -64,7 +66,9 @@ namespace Lab4_Tenisdef
             textBox3.Clear();
             textBox4.Clear();
 
-            
+            ActualizarDataGridView2ConTopCinco();
+
+
         }
 
         private void ConfigurarDataGridView()
@@ -188,6 +192,49 @@ namespace Lab4_Tenisdef
             }
         }
 
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                
+            
+
+        }
+
+        private void ActualizarDataGridView2ConTopCinco()
+        {
+            var puntajes = new List<(string fecha, string jugador1, int puntaje1, string jugador2, int puntaje2, int sumaPuntajes)>();
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (int.TryParse(row.Cells["columna2"].Value?.ToString(), out int puntaje1) &&
+                    int.TryParse(row.Cells["columna4"].Value?.ToString(), out int puntaje2))
+                {
+                    string fecha = row.Cells["columna5"].Value.ToString();
+                    string jugador1 = row.Cells["columna1"].Value.ToString();
+                    string jugador2 = row.Cells["columna3"].Value.ToString();
+
+                    puntajes.Add((fecha, jugador1, puntaje1, jugador2, puntaje2, puntaje1 + puntaje2));
+                }
+            }
+
+            var topCinco = puntajes.OrderByDescending(x => x.sumaPuntajes).Take(5);
+
+            dataGridView2.Rows.Clear();
+            foreach (var item in topCinco)
+            {
+                dataGridView2.Rows.Add(item.fecha, item.jugador1, item.puntaje1, item.jugador2, item.puntaje2);
+            }
+        }
+
+        private void ConfigurarDataGridView2()
+        {
+            dataGridView2.Columns.Clear();
+            dataGridView2.Columns.Add("columna5", "Fecha");
+            dataGridView2.Columns.Add("columna1", "Nombre Jugador 1");
+            dataGridView2.Columns.Add("columna2", "Puntaje Jugador 1");
+            dataGridView2.Columns.Add("columna3", "Nombre Jugador 2");
+            dataGridView2.Columns.Add("columna4", "Puntaje Jugador 2");
+        }
 
 
     }

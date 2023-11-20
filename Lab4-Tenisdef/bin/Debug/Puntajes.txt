@@ -1,2 +1,6 @@
-19/11/2023,Sofia,10,Alexa,9
-19/11/2023,camilo,10,juan,10
+19/11/2023,camilo,1,diego,2
+19/11/2023,samuel,6,juan,7
+19/11/2023,alexa,10,diego,10
+19/11/2023,maritza,10,sofia,7
+19/11/2023,pedro,10,oscar,9
+19/11/2023,shara,10,juan,10
